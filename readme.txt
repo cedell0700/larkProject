@@ -3,15 +3,13 @@ Welcome to LARK
 
 Name of Game: GAME NAME
 
-Developed by: Colby Edell, Andrew Piasecki, Louis Irias, 
+Developed by: Colby Edell, Andrew Piasecki, Louis Irias
 
 Narrative:
 
-	A reckless tourist got lost in the dunes of the Sahara.
-	While finding their way back home, they reported seeing a pyramid-like figure in the distance.
-	There are no recorded structures in the area they're reporting they saw this figure.
-	You are the archaeologist in charge of investigating the tourist's narrative.
-	If this rumor turns out to be true, it's up to you to explore the pyramid.
-	You are the one who needs to discover its secrets.
+	You are Abdelkader Nuru, a scavenger looking to steal the treasures hidden in Khufu's Pyramid, constructed some 500 years ago in the Old Kingdom of Egypt.
+	As you go through the pyramid, you find scriptures and carvings depicting terrifying tales, though you persist.
+	Once you find Khufu's tomb, you encounter an unfortunate fate.
+	Will you triumph?
 
-Instructions: Type "source ./startGame.sh", followed by a press of the ENTER key, to begin your journey.
+Instructions: Type ". startGame.sh", followed by a press of the ENTER key, to begin your journey.

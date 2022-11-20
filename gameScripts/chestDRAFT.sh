@@ -1,20 +1,7 @@
 #!/bin/bash
 
-cat <<hallwayScript
-
-From the main room of the pyramid, you walk into a long, barren passageway.
-
-There doesn't seem like any way out...
-
-What if you're trapped here forever?
-
-hallwayScript
-
-#touch chest.sh
-#chmod +x chest.sh
-
-cat <<hallwayChest > chest.sh
-
+if [ $chestLocked = "true" ]
+	then
 cat <<chestLocked
 
 This chest is locked.
@@ -65,14 +52,3 @@ USE "-a" TO UNCOVER WHAT IS HIDING.
 
 Hmm... perhaps this is another option for your "ls" command?
 
-tabletContents
-
-keyAcquired
-
-mkdir ./hallway/.hiddenPassageway
-
-keyScript
-
-hallwayChest
-
-enteredHallway="true"

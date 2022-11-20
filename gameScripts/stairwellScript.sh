@@ -1,5 +1,9 @@
-#!/bin/bash
-
+if [ $stairwellAllowed = "false" ]
+	then
+		echo "You aren't allowed here yet."
+		cd ..
+elif [ $stairwellAllowed = "true" ]
+	then
 cat <<stairwellScript
 
 You climb the stairwell and reach the next floor of the pyramid.
@@ -34,37 +38,38 @@ Use "tail [-numberOfLines]" to print out the last lines of a piece of text.
 
 stairwellScript
 
-cat <<translations >translationBook
+#cat <<translations >translationBook
 
-Y -> A
-9 -> B
-U -> C
-Z -> D
-X -> E
-C -> F
-B -> G
-T -> H
-4 -> I
-5 -> J
-A -> K
-3 -> L
-K -> M
-S -> N
-2 -> O
-1 -> P
-6 -> Q
-L -> R
-J -> S
-V -> T
-8 -> U
-F -> V
-H -> W
-7 -> X
-N -> Y
-Q -> Z
+#Y -> A
+#9 -> B
+#U -> C
+#Z -> D
+#X -> E
+#C -> F
+#B -> G
+#T -> H
+#4 -> I
+#5 -> J
+#A -> K
+#3 -> L
+#K -> M
+#S -> N
+#2 -> O
+#1 -> P
+#6 -> Q
+#L -> R
+#J -> S
+#V -> T
+#8 -> U
+#F -> V
+#H -> W
+#7 -> X
+#N -> Y
+#Q -> Z
 
-translations
+#translations
 
-cp ../../../../../gameScripts/namesEncrypted ./tombList
-cp ../../../../../gameScripts/assanSyed.sh ./assanSyed.sh
-climbedStairwell="true"
+#cp ../../../../../gameScripts/namesEncrypted ./tombList
+#cp ../../../../../gameScripts/assanSyed.sh ./assanSyed.sh
+		climbedStairwell="true"
+fi

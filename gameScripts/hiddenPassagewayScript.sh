@@ -1,3 +1,10 @@
+#!/bin/bash
+if [ $hiddenPassagewayAllowed = "false" ]
+	then
+		echo "You aren't allowed here yet."
+		cd ..
+elif [ $hiddenPassagewayAllowed = "true" ]
+	then
 cat <<hiddenPassagewayScript
 
 The option you found on that tablet acted as a powerful magic spell.
@@ -13,5 +20,6 @@ Use "ls -a" to view hidden files.
 		- When using the "-a" option, "." and ".." mean "current room" and "previous room", respectively.
 
 hiddenPassagewayScript
-enteredHiddenPassageway="true"
-source ../../../gameScripts/createDoors.sh
+		enteredHiddenPassageway="true"
+		#source ../../../gameScripts/createDoors.sh
+fi

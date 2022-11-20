@@ -21,4 +21,4 @@ Use "ls -F" to light your torch and view your surroundings.
 
 entryScript
 enteredPyramid="true"
-mkdir hallway
+#mkdir hallway

@@ -1,19 +1,3 @@
-#!/bin/bash
-
-cat <<hallwayScript
-
-From the main room of the pyramid, you walk into a long, barren passageway.
-
-There doesn't seem like any way out...
-
-What if you're trapped here forever?
-
-hallwayScript
-
-#touch chest.sh
-#chmod +x chest.sh
-
-cat <<hallwayChest > chest.sh
 
 cat <<chestLocked
 
@@ -73,6 +57,3 @@ mkdir ./hallway/.hiddenPassageway
 
 keyScript
 
-hallwayChest
-
-enteredHallway="true"

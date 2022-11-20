@@ -1,5 +1,10 @@
 #!/bin/bash
-
+if [ $doorwayAllowed = "false" ]
+	then
+		echo "You aren't allowed here yet."
+		cd ..
+elif [ $doorwayAllowed = "true" ]
+	then
 cat <<doorwayScript
 
 You pass dozens of illusionary doorways to find one, real doorway.
@@ -26,43 +31,44 @@ Use "tr" to "translate" characters. This utility takes text input, and transform
 
 doorwayScript
 
-cat <<translations >translationBook
+#cat <<translations >translationBook
 
-Y -> A
-9 -> B
-U -> C
-Z -> D
-X -> E
-C -> F
-B -> G
-T -> H
-4 -> I
-5 -> J
-A -> K
-3 -> L
-K -> M
-S -> N
-2 -> O
-1 -> P
-6 -> Q
-L -> R
-J -> S
-V -> T
-8 -> U
-F -> V
-H -> W
-7 -> X
-N -> Y
-Q -> Z
+#Y -> A
+#9 -> B
+#U -> C
+#Z -> D
+#X -> E
+#C -> F
+#B -> G
+#T -> H
+#4 -> I
+#5 -> J
+#A -> K
+#3 -> L
+#K -> M
+#S -> N
+#2 -> O
+#1 -> P
+#6 -> Q
+#L -> R
+#J -> S
+#V -> T
+#8 -> U
+#F -> V
+#H -> W
+#7 -> X
+#N -> Y
+#Q -> Z
 
-translations
+#translations
 
-echo "FOUR TWO THREE ONE" | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' 'Y9UZXCBT45A3KS216LJV8FH7NQ' > tablet
+#echo "FOUR TWO THREE ONE" | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' 'Y9UZXCBT45A3KS216LJV8FH7NQ' > tablet
 #cat tablet | tr 'Y9UZXCBT45A3KS216LJV8FH7NQ' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' > tabletDecrypted
 
-cp ../../../../gameScripts/button1.sh ./button1.sh
-cp ../../../../gameScripts/button2.sh ./button2.sh
-cp ../../../../gameScripts/button3.sh ./button3.sh
-cp ../../../../gameScripts/button4.sh ./button4.sh
+#cp ../../../../gameScripts/button1.sh ./button1.sh
+#cp ../../../../gameScripts/button2.sh ./button2.sh
+#cp ../../../../gameScripts/button3.sh ./button3.sh
+#cp ../../../../gameScripts/button4.sh ./button4.sh
 
 enteredDoorway="true"
+fi
