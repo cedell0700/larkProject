@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cat names | tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz' 'Y9UZXCBT45A3KS216LJV8FH7NQY9UZXCBT45A3KS216LJV8FH7NQ' > namesEncrypted
+cat namesEncrypted | tr 'Y9UZXCBT45A3KS216LJV8FH7NQ' 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' > namesDecrypted
