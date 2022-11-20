@@ -38,6 +38,7 @@ Regardless, you approach the massive structure, which is now towering above you.
 	+ The "placeName" after the command is an argument, which is something the command needs to be provided.
 	+ In this case, cd needs to be provided the name of the place (folder) you want to move to.
 	+ For example, use "cd pyramid" to enter the pyramid.
+	+ Note: You can use "cd .." to move to your previous "room", but don't do it now, or you'll leave the game folder!
 
 introScript
 
@@ -49,6 +50,7 @@ introScript
 
 enteredPyramid="false"
 enteredHallway="false"
+keyCollected="false"
 hiddenPassagewayAllowed="false"
 enteredHiddenPassageway="false"
 doorwayAllowed="false"
@@ -56,6 +58,8 @@ enteredDoorway="false"
 buttonCombination=""
 stairwellAllowed="false"
 climbedFirstStairwell="false"
+helpedAssan="false"
+enteredTomb="false"
 
 function cd() { # Redefine cd so that it prints desired messages when the user first enters a room.
 	command cd "$@" || return
@@ -78,6 +82,10 @@ function cd() { # Redefine cd so that it prints desired messages when the user f
 	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell$ | wc -l` -eq 1 -a $climbedFirstStairwell = "false" ]
 		then
 			source ../../../../../gameScripts/stairwellScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu$ | wc -l` -eq 1 -a $enteredTomb = "false" ]
+		then
+			source ../../../../../gameScripts/tombScript.sh
 	fi
 }
 

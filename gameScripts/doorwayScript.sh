@@ -27,7 +27,8 @@ Use "tr" to "translate" characters. This utility takes text input, and transform
 	+ The syntax is "tr '(originalCharacter1)[(originalCharacter2)...]' '(translatedCharacter1)[(translatedCharacter2)...]'"
 		- For example, "tr 'abc' 'ABC'" would translate any lowercase a, b, or c in a text to its capitalized counterpart.
 		- As another example, "tr 'yL' 'eH'" would replace every "y" with "e" a,d "L" with "H". When used with the phrase "Lyllo tLyry", it would output "Hello tHere". 
-	+ Note: This command can't be used alone. Use the pipe "|" operator to first read the tablet, then translate its contents.
+	+ Note: This command can't be used alone. Use the pipe "|" operator to first read the tablet with cat, then translate its contents with tr.
+		- Example command: "cat tablet | tr 'ABCDE' 'HELLO'"
 
 doorwayScript
 
