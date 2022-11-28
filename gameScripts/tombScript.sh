@@ -2,7 +2,8 @@
 
 if [ $helpedAssan = "false" ]
 		then
-			echo "\nAssan is blocking your way. You must help him find his father. Perhaps you should search for his last name?\n"
+			echo -e "\nAssan is blocking your way. You must help him find his father. Perhaps you should search for his last name?\n"
+			cd ..
 elif [ $helpedAssan = "true" ]
 		then
 cat<<tombScript

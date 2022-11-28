@@ -1,5 +1,5 @@
 cat .pyramidPhoto1
-read -p "                                    Press [RETURN] to begin." "startGame"
+read -p "                                                                          Press [RETURN] to begin." "startGame"
 #cat <<introScriptOld
 
 #Following rumors of an unexplored pyramid in the desert, you begin your journey with a car ride out of the city.
@@ -57,9 +57,27 @@ doorwayAllowed="false"
 enteredDoorway="false"
 buttonCombination=""
 stairwellAllowed="false"
-climbedFirstStairwell="false"
+climbedStairwell="false"
 helpedAssan="false"
 enteredTomb="false"
+tombSequenceBegun="false"
+PS3="What would you like to do? (Type 1, 2, or 3): "
+shezmuPathAllowed="false"
+shezmuPathEntered="false"
+holeInWallAllowedShezmu="false"
+holeInWallEnteredShezmu="false"
+shezmuKeyCollected="false"
+ammitPathAllowed="false"
+ammitPathEntered="false"
+rubbleAmount=1865
+holeInWallAllowedAmmit="false"
+holeInWallEnteredAmmit="false"
+ammitKeyCollected="false"
+apophisPathAllowed="false"
+apophisPathEntered="false"
+holeInWallAllowedApophis="false"
+holeInWallEnteredApophis="false"
+apophisKeyCollected="false"
 
 function cd() { # Redefine cd so that it prints desired messages when the user first enters a room.
 	command cd "$@" || return
@@ -79,13 +97,68 @@ function cd() { # Redefine cd so that it prints desired messages when the user f
 		then
 			source ../../../../gameScripts/doorwayScript.sh
 	fi
-	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell$ | wc -l` -eq 1 -a $climbedFirstStairwell = "false" ]
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell$ | wc -l` -eq 1 -a $climbedStairwell = "false" ]
 		then
 			source ../../../../../gameScripts/stairwellScript.sh
 	fi
 	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu$ | wc -l` -eq 1 -a $enteredTomb = "false" ]
 		then
-			source ../../../../../gameScripts/tombScript.sh
+			source ../../../../../../gameScripts/tombScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu/ammitsPath$ | wc -l` -eq 1 -a $ammitPathEntered = "false" ]
+		then
+			source ../../../../../../../gameScripts/ammitEntryScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu/ammitsPath/holeInWall$ | wc -l` -eq 1 -a $holeInWallEnteredAmmit = "false" ]
+		then
+			source ../../../../../../../../gameScripts/holeInWallAmmitScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu/shezmusPath$ | wc -l` -eq 1 -a $shezmuPathEntered = "false" ]
+		then
+			source ../../../../../../../gameScripts/shezmuEntryScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu/shezmusPath/holeInWall$ | wc -l` -eq 1 -a $holeInWallEnteredShezmu = "false" ]
+		then
+			source ../../../../../../../../gameScripts/holeInWallShezmuScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu/apophisPath$ | wc -l` -eq 1 -a $apophisPathEntered = "false" ]
+		then
+			source ../../../../../../../gameScripts/apophisEntryScript.sh
+	fi
+	if [ `pwd | grep pyramid/hallway/.hiddenPassageway/doorway57/stairwell/tombOfKhufu/apophisPath/holeInWall$ | wc -l` -eq 1 -a $holeInWallEnteredApophis = "false" ]
+		then
+			source ../../../../../../../../gameScripts/holeInWallApophisScript.sh
 	fi
 }
 
+function cat(){
+	if [ `echo $@ | grep .sh | wc -l` -ge 1 ]; then
+		echo -e "\nYou cannot read encounters.\n"
+	else
+		command cat "$@" || return
+	fi
+}
+
+function rm(){
+	echo -e "\nSorry, you can't remove files in this game.\n"
+}
+
+function cp(){
+	if [ `echo $1 | grep wine | wc -l` -eq 1 -o `echo $1 | grep ointment | wc -l` -eq 1 -o `echo $1 | grep perfume | wc -l` -eq 1 ]; then
+		if [ `echo $2 | grep wine | wc -l` -eq 1 -o `echo $2 | grep ointment | wc -l` -eq 1 -o `echo $2 | grep perfume | wc -l` -eq 1 ]; then
+			command cp "$@" || return
+		fi
+	else
+		echo -e "\nSorry, you can't copy files here.\n"
+	fi
+}
+
+function mv(){
+	if [ `echo $1 | grep wine | wc -l` -eq 1 -o `echo $1 | grep ointment | wc -l` -eq 1 -o `echo $1 | grep perfume | wc -l` -eq 1 ]; then
+		if [ `echo $2 | grep wine | wc -l` -eq 1 -o `echo $2 | grep ointment | wc -l` -eq 1 -o `echo $2 | grep perfume | wc -l` -eq 1 ]; then
+			command mv "$@" || return
+		fi
+	else
+		echo -e "\nSorry, you can't move files here.\n"
+	fi
+}
