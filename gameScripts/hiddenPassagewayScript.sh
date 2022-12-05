@@ -13,7 +13,7 @@ It made your torch shine brighter than it ever did before, allowing you to see h
 
 You find a narrow break in the stone walls, and squeeze your body through to the other side.
 
-Use "ls -a" to view hidden files.
+# Use "ls -a" to view hidden files/directories.
 	+ Note: You can combine options together by simply using their corresponding names after the dash (For example: "ls -aF")
 	+ The syntax is "commandName -(option1)(option2)..."
 	+ For example, you can use "ls -aF" to view hidden contents as well as the suffixes (\/ for folders, * for scripts...) you've seen before.

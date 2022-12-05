@@ -22,6 +22,8 @@ as repayment for your sins, I will take your body and soul and make a great wine
 
 Shezmu begins to charge you! 
 
+You find weapons on the ground from slain warriors before you. Perhaps you can use them?
+
 Introduction
 
 Health=30
@@ -31,7 +33,8 @@ BossDamage=1
 Res=1
 WineCounter=0
 skip=0
-
+move=1
+turn=1
 #mkdir ~/Lark/Shezmu/shezOffense/room
 #mkdir ~/Lark/Shezmu/shezOffense/room/stonePillar
 #mkdir ~/Lark/Shezmu/shezOffense/room/stonePillar2
@@ -40,6 +43,6 @@ skip=0
 #mkdir ~/Lark/Shezmu/shezOffense/room/stoneWall
 #mkdir ~/Lark/Shezmu/shezOffense/room/textiles
 
-source ./Status.sh
+source ../../../../../../../../gameScripts/Shezmu/Status.sh
 
 

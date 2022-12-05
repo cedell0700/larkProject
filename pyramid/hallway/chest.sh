@@ -1,5 +1,8 @@
 #!/bin/bash
 
+if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
+	echo "This encounter must be run as either '. ${BASH_SOURCE[0]}' or 'source ${BASH_SOURCE[0]}'."
+else
 if [ $keyCollected = "false" ]
 	then
 cat <<chestLocked
@@ -39,7 +42,11 @@ It turns, and the chest creaks open.
 
 Inside, you find a stone tablet with what seems to be some writing engraved on it.
 
-Use "cat tablet" to read it.
+It reads,
+
+"Use "-a" to uncover what otherwise may not be seen."
+
+Hmm... perhaps this is regarding your "ls" command?
 
 chestUnlocked
 
@@ -53,4 +60,5 @@ doorwayAllowed="true"
 #USE "-a" TO UNCOVER WHAT IS HIDING.
 
 #Hmm... perhaps this is another option for your "ls" command?
+fi
 fi

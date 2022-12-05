@@ -1,4 +1,7 @@
 #!/bin/bash
+if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
+	echo "This encounter must be run as either '. ${BASH_SOURCE[0]}' or 'source ${BASH_SOURCE[0]}'."
+else
 if [ $doorwayAllowed = "false" ]
 	then
 		echo "You aren't allowed here yet."
@@ -19,11 +22,14 @@ Thankfully, being the prepared explorer you are, you've brought a journal contai
 
 You set your book on the ground to compare to the tablet.
 
-Use "|" (known as the "pipe" character) between commands to "combine" them.
+# Use "cat" to read text.
+	+ The syntax is "cat (fileName)"
+
+# Use "|" (known as the "pipe" character) between commands to "combine" them.
 	+ The syntax is "command1 [-(option1)(option2)] | command2 [-(option1)(option2)]"
 		- Note: brackets [] indicate optional inputs. Some commands do not require options.
 
-Use "tr" to "translate" characters. This utility takes text input, and transforms characters into specified counterparts.
+# Use "tr" to "translate" characters. This utility takes text input, and transforms characters into specified counterparts.
 	+ The syntax is "tr '(originalCharacter1)[(originalCharacter2)...]' '(translatedCharacter1)[(translatedCharacter2)...]'"
 		- For example, "tr 'abc' 'ABC'" would translate any lowercase a, b, or c in a text to its capitalized counterpart.
 		- As another example, "tr 'yL' 'eH'" would replace every "y" with "e" a,d "L" with "H". When used with the phrase "Lyllo tLyry", it would output "Hello tHere". 
@@ -72,4 +78,5 @@ doorwayScript
 #cp ../../../../gameScripts/button4.sh ./button4.sh
 
 enteredDoorway="true"
+fi
 fi

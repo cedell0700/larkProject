@@ -1,5 +1,9 @@
 #!/bin/bash
 
+if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
+	echo "This encounter must be run as either '. ${BASH_SOURCE[0]}' or 'source ${BASH_SOURCE[0]}'."
+else
+
 userHealth=100
 resistance=5
 ammitHealth=100
@@ -23,7 +27,7 @@ function checkGame(){
 	fi
 	if [ $ammitHealth -le 0 ]
 		then
-			echo -e "\nYou have defeated Ammit!\n\nYou promptly grab the key from her body.\n"
+			echo -e "\nYou have defeated Ammit!\n\nYou promptly grab the key from her body.\n\nThe last deity to defeat is Apophis.\n"
 			ammitKeyCollected="true"
 			apophisPathAllowed="true"
 			break
@@ -88,7 +92,6 @@ while [ 1 -eq 1 ]
 			do
 				if [ $REPLY -eq 1 ]; then
 					#echo -e "\nYou slash at Ammit with your weapon, dealing $attackDamage damage."
-					read -p "Which weapon would you like to use? " userResponse
 cat<<weaponList
 Your current weapons:
 
@@ -103,6 +106,7 @@ Your current weapons:
 Respond with the number corresponding to the weapon you'd like to attack with.
 
 weaponList
+					read -p "Which weapon would you like to use? " userResponse
 					if [ $userResponse -eq 1 ]; then
 						echo -en "You slash Ammit with your dagger, dealing "
 						attackDamage=1
@@ -171,3 +175,5 @@ weaponList
 			judgeOfHeart
 		fi
 done
+
+fi

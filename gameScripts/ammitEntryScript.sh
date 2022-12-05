@@ -25,7 +25,7 @@ The only way forward is to clear the rocks ahead of you.
 
 Luckily, you have a utility that is very good at repetitive tasks!
 
-#Use "vim clearRubble.sh" to open a script named "clearRubble". Scripts allow you to perform whatever task you'd like; in this case, it will be to clear the rubble.
+# Use "vim clearRubble.sh" to open a script named "clearRubble". Scripts allow you to perform whatever task you'd like; in this case, it will be to clear the rubble.
 	+ Vim itself is a text editor, but you can use it to create scripts.
 	+ It has two main modes: Command Mode and Input Mode.
 		- Command Mode allows you to use various commands to make text editing faster; we won't cover them here, but you can do more research on those commands.
@@ -35,7 +35,7 @@ Luckily, you have a utility that is very good at repetitive tasks!
 	+ To make a script, begin your file with the following phrase (excluding the quotes): "#!/bin/bash"
 	+ To save a file, enter Command Mode (press "ESCAPE") then type "ZZ" (both capitalized by holding "SHIFT").
 	
-#When writing a shell script, you may automate repetitive tasks using a "for loop". This will repeat commands a certain amount of times.
+# When writing a shell script, you may automate repetitive tasks using a "for loop". This will repeat commands a certain amount of times.
 	+ To make a for loop, use the following syntax:
 		for i in {(startingNumber)..(endingNumber)}
 		do
@@ -43,9 +43,9 @@ Luckily, you have a utility that is very good at repetitive tasks!
 			[ THIS CAN BE AS MANY LINES AS YOU'D LIKE. ]
 		done
 
-#To run your script, you must first type "chmod u+x clearRubble.sh" to give yourself permissions to do so.
+# To run your script, you must first type "chmod u+x clearRubble.sh" to give yourself permissions to do so.
 
-#Then, you may run it as with any other encounter with ". clearRubble.sh".
+# Then, you may run it as with any other encounter with ". clearRubble.sh".
  
 Unless you want to clear all of the rubble by hand, you should use vim to create a script with a for loop that clears it all for you.
 

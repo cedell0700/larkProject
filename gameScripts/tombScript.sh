@@ -8,11 +8,13 @@ elif [ $helpedAssan = "true" ]
 		then
 cat<<tombScript
 
-Story elements about entering the tomb and how luxurious it is.
+Upon entering the tomb, you take notice of a sarcophagus lying in the center of the room.
 
-The sarcophagus lies in the center of the room.
+This must be the one that holds the riches you desire.
 
-Just describe the room here, the stuff that happens when the tomb is opened is within the "openTomb.sh" script.
+Rumor has it that this tomb contains every imaginable treasure: precious jewelry, powerful weapons, and mountains of gold.
+
+Finally, the only thing that stands before you and a lifetime of wealth is the lid of the sarcophagus.
 
 tombScript
 

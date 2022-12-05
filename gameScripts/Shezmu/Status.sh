@@ -1,24 +1,34 @@
 #!/bin/bash
 
-if [ $Health -eq 0 ]
+if [ $Health -le 0 ]
 then
 cat<<Message
+
 You have been slain by Shezmu, the deity of Blood and Wine
 
 "Poor little thief, you should learn to not mess with gods."
-Message
 
-elif [ $BossHealth -eq 0 ]
+Run "Shezmu.sh" to try again.
+Message
+return
+elif [ $BossHealth -le 0 ]
 then
 cat<<Message
-You have slained Shezmu, the deity of Blood and Wine
 
-"Your punishment with arrive in time Adbelkader" says Shezmu
+You have slain Shezmu, the deity of Blood and Wine
 
-You finish him by cutting his head off and kicking it away
+Shezmu says, "Your punishment with arrive in time, Adbelkader."
+
+You finish him by cutting his head off and kicking it away.
+
+You collect the key Shezmu was holding.
+
+You should track down Ammit next.
+
 Message
 shezmuKeyCollected="true"
 ammitPathAllowed="true"
+return
 else
 num=$(( RANDOM % 4 ))
 case $num in
@@ -30,10 +40,18 @@ case $num in
 esac
 fi
 
-turn=1
+cat<<Health
+---------------------------------------------------
+Your Health=$Health
+Shezmu's Health=$BossHealth
+---------------------------------------------------
+Health
+
+#echo "Turn: $turn Move: $move Skip: $skip"
+
 case $turn in
 	0)cat<<you
-Your Turn
+Your Turn. Run a weapon script to attack Shezmu.
 you
 ;;
 	1)cat<<boss

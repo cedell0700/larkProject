@@ -10,4 +10,4 @@ Damage=$(( 6+$Bleed ))
 
 BossHealth=$(( $BossHealth-$Damage ))
 
-./../Shezmu/Status.sh
+source ../../../../../../../../gameScripts/Shezmu/Status.sh

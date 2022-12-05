@@ -4,4 +4,4 @@ Damage=7
 
 BossHealth=$(( $BossHealth-$Damage ))
 
-./../Shezmu/Status.sh
+source ../../../../../../../../gameScripts/Shezmu/Status.sh

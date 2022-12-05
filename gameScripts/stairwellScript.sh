@@ -22,16 +22,16 @@ Startled, you jump backwards, as the skeleton just keeps repeating,
 
 "MY NAME IS ASSAN SYED. IN WHAT SLOT DOES MY FATHER LIE?"
 
-Use "grep 'phrase'" to search for a specific string in a piece of text.
+# Use "grep 'phrase'" to search for a specific string in a piece of text.
 	+ For example, "grep 'hello'" would search for and print lines containing the phrase "hello".
 	+ Note: This command cannot be used alone. Use a different command followed by a pipe "|" to first read the text you'd like to search.
 
-Use "head [-numberOfLines]" to print out the first lines of a piece of text.
+# Use "head [-numberOfLines]" to print out the first lines of a piece of text.
 	+ For example, "head -15" would print the first 15 lines of a piece of text.
 	+ Note: numberOfLines is optional. Simply using "head" will print the default of 10 lines.
 	+ Note: This command cannot be used alone. Use a different command followed by a pipe "|" to first read the text you'd like to search.
 
-Use "tail [-numberOfLines]" to print out the last lines of a piece of text.
+# Use "tail [-numberOfLines]" to print out the last lines of a piece of text.
 	+ For example, "tail -15" would print the last 15 lines of a piece of text.
 	+ Note: numberOfLines is optional. Simply using "tail" will print the default of 10 lines.
 	+ Note: This command cannot be used alone. Use a different command followed by a pipe "|" to first read the text you'd like to search.

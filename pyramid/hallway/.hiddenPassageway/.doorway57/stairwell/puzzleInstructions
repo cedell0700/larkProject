@@ -1,0 +1,17 @@
+
+# Use "grep 'phrase'" to search for a specific string in a piece of text.
+	+ For example, "grep 'hello'" would search for and print lines containing the phrase "hello".
+	+ Note: This command cannot be used alone. Use a different command followed by a pipe "|" to first read the text you'd like to search.
+
+# Use "head [-numberOfLines]" to print out the first lines of a piece of text.
+	+ For example, "head -15" would print the first 15 lines of a piece of text.
+	+ Note: numberOfLines is optional. Simply using "head" will print the default of 10 lines.
+	+ Note: This command cannot be used alone. Use a different command followed by a pipe "|" to first read the text you'd like to search.
+
+# Use "tail [-numberOfLines]" to print out the last lines of a piece of text.
+	+ For example, "tail -15" would print the last 15 lines of a piece of text.
+	+ Note: numberOfLines is optional. Simply using "tail" will print the default of 10 lines.
+	+ Note: This command cannot be used alone. Use a different command followed by a pipe "|" to first read the text you'd like to search.
+
+HINT: After translating the tomb list, use the pipe | operator with a command to search for Assan's last name (in all caps).
+
