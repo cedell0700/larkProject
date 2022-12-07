@@ -1,4 +1,10 @@
 #!/bin/bash
+if [ $shezmuKeyCollected = "true" ]; then
+	echo -e "\nYou've already defeated Shezmu.\n"
+else
+if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
+	echo "This encounter must be run as either '. ${BASH_SOURCE[0]}' or 'source ${BASH_SOURCE[0]}'."
+else
 
 cat<<Introduction
 As you enter the vacant and dark room with Shezmu you are met with an ominous 
@@ -45,4 +51,5 @@ turn=1
 
 source ../../../../../../../../gameScripts/Shezmu/Status.sh
 
-
+fi
+fi

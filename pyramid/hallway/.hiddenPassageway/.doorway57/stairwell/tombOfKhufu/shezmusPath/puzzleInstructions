@@ -1,0 +1,5 @@
+
+# Use "mv" to move objects to different containers (folders).
+	+ The syntax is "mv (originalFilePath) (newFilePath)"
+		- For example, if you have an object named "pencil" and a folder named "backpack", "mv pencil backpack" would put it in the container.
+

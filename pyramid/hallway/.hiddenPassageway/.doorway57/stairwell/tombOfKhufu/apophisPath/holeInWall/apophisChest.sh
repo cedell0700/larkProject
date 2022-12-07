@@ -8,7 +8,7 @@ echo ""
 read -p "What is the password? " userResponse
 
 if [ $userResponse = "SHAPESHIFT" ]; then
-	echo -e "\nThe chest pops open, revealing your third and final key!\n"
+	echo -e "\nThe chest pops open, revealing Apophis' key! You promptly stash it in your pocket.\n"
 	apophisKeyCollected="true"
 else
 	echo -e "\nIncorrect.\n"

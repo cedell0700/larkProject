@@ -21,13 +21,10 @@ Shezmu says, "Your punishment with arrive in time, Adbelkader."
 
 You finish him by cutting his head off and kicking it away.
 
-You collect the key Shezmu was holding.
-
-You should track down Ammit next.
+You collect Shezmu's key.
 
 Message
 shezmuKeyCollected="true"
-ammitPathAllowed="true"
 return
 else
 num=$(( RANDOM % 4 ))

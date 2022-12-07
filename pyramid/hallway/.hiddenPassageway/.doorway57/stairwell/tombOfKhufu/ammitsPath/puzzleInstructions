@@ -1,0 +1,23 @@
+
+# Use "vim clearRubble.sh" to open a script named "clearRubble". Scripts allow you to perform whatever task you'd like; in this case, it will be to clear the rubble.
+	+ Vim itself is a text editor, but you can use it to create scripts.
+	+ It has two main modes: Command Mode and Input Mode.
+		- Command Mode allows you to use various commands to make text editing faster; we won't cover them here, but you can do more research on those commands.
+			~ To access Command Mode, press the "ESCAPE" key on your keyboard.
+		- Input Mode allows you to input text.
+			~ To access Input Mode, press the "i" key on your keyboard.
+	+ To make a script, begin your file with the following phrase (excluding the quotes): "#!/bin/bash"
+	+ To save a file, enter Command Mode (press "ESCAPE") then type "ZZ" (both capitalized by holding "SHIFT").
+	
+# When writing a shell script, you may automate repetitive tasks using a "for loop". This will repeat commands a certain amount of times.
+	+ To make a for loop, use the following syntax:
+		for i in {(startingNumber)..(endingNumber)}
+		do
+			[ INSERT TASKS YOU'D LIKE TO REPEAT HERE. ]
+			[ THIS CAN BE AS MANY LINES AS YOU'D LIKE. ]
+		done
+
+# To run your script, you must first type "chmod u+x clearRubble.sh" to give yourself permissions to do so.
+
+# Then, you may run it as with any other encounter with ". clearRubble.sh".
+

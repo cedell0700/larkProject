@@ -1,5 +1,7 @@
 #!/bin/bash
-
+if [ $(tput lines) -lt 54 -o $(tput cols) -lt 175 ]; then
+	echo -e "\nPlease enlarge your screen for the game to display properly.\n"
+else
 if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
 	echo "This encounter must be run as either '. ${BASH_SOURCE[0]}' or 'source ${BASH_SOURCE[0]}'."
 else
@@ -212,4 +214,5 @@ function vim(){
 		echo -e "\nSorry, you can't use that here.\n"
 	fi
 }
+fi
 fi

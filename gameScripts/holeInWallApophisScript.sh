@@ -1,8 +1,9 @@
 #!/bin/bash
 
-if [ $holeInWallApophisAllowed = "false" ]; then
+if [ $holeInWallAllowedApophis = "false" ]; then
 	echo -e "\nYou aren't allowed here yet.\n"
 	cd ..
-elif [ $holeInWallApophisAllowed = "true" ]; then
+elif [ $holeInWallAllowedApophis = "true" ]; then
+	source ../../../../../../../../gameScripts/Apophis.sh
 	holeInWallEnteredApophis="true"
 fi

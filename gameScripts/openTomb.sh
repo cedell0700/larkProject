@@ -40,11 +40,12 @@ Shortly afterward, you notice three keyholes within Khufu's resting place.
 
 You realize you need to track down the three spirits and defeat them if you want to access the riches within.
 
-
 tombOpening
 
 tombSequenceBegun="true"
 shezmuPathAllowed="true"
+apophisPathAllowed="true"
+ammitPathAllowed="true"
 
 elif [ $tombSequenceBegun = "true" ]; then
 	if [ $ammitKeyCollected = "true" -a $shezmuKeyCollected = "true" -a $apophisKeyCollected = "true" ]; then

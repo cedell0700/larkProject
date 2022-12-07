@@ -19,3 +19,4 @@ Instructions:
 	The game will guide you with the rest as you go along, but generally, remember to run scripts using "source scriptName" for the game to work correctly.
 	If you're not sure how to complete a particular puzzle, do some more research on the command(s) mentioned when you entered the puzzle room.
 	A good place to start is the Manual utility ("man utilityName".)
+

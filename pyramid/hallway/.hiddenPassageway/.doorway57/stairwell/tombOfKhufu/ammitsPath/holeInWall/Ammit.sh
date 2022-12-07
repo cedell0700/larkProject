@@ -1,5 +1,7 @@
 #!/bin/bash
-
+if [ $ammitKeyCollected = "true" ]; then
+	echo -e "\nYou've already defeated Ammit.\n"
+else
 if [[ "${BASH_SOURCE[0]}" = "${0}" ]]; then
 	echo "This encounter must be run as either '. ${BASH_SOURCE[0]}' or 'source ${BASH_SOURCE[0]}'."
 else
@@ -29,14 +31,19 @@ function checkGame(){
 		then
 			echo -e "\nYou have defeated Ammit!\n\nYou promptly grab the key from her body.\n"
 			ammitKeyCollected="true"
-			apophisPathAllowed="true"
 			break
 	fi
 			
 }
 
 function printStats(){
-	echo -e "\nYour Health: [$userHealth]        Your Resistance: [$resistance]        Ammit's Health: [$ammitHealth]\n"
+	if [ $ammitHealth -le 0 ]; then
+		echo -e "\nYour Health: [$userHealth]        Your Resistance: [$resistance]        Ammit's Health: [0]\n"
+	elif [ $userHealth -le 0 ]; then
+		echo -e "\nYour Health: [0]        Your Resistance: [$resistance]        Ammit's Health: [$ammitHealth]\n"
+	else
+		echo -e "\nYour Health: [$userHealth]        Your Resistance: [$resistance]        Ammit's Health: [$ammitHealth]\n"
+	fi
 }
 
 function judgeOfHeart(){
@@ -163,6 +170,7 @@ weaponList
 					echo -e "\nInvalid choice, please try again. Remember to type the number corresponding to the action you wish to take.\n"
 				fi
 			done
+		checkGame
 		moveNumber=$(($RANDOM % 100))
 		#moveNumber=$(( RANDOM % 4))
 		if [ $moveNumber -ge 0 -a $moveNumber -le 24 ]; then
@@ -176,4 +184,5 @@ weaponList
 		fi
 done
 
+fi
 fi
